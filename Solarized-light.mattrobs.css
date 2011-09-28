@@ -1,0 +1,305 @@
+/*
+    @theme Solarized-light
+    @override-placeholders html, css, js, php, python
+*/
+
+@base {
+    color: #657b83;
+    background-color: #fdf6e3;
+    insertion-point-color: #aaa;
+    insertion-point-width: 2px;
+    selection-background-color: rgba(0,0,0,.1);
+    current-line-background-color: rgba(0,0,0,.03);
+}
+
+tag, source, sourcecode {
+    spell-check: disabled;
+}
+
+/* Standard
+----------------------------------------------------*/
+string, literal.string {
+	color: #2aa198;
+	spell-check: enabled;
+}
+
+regex, literal.regex {
+    color: #d33682;
+}
+
+numeric, literal.numeric {
+    color: #2aa198;
+}
+
+keyword.constant, literal.keyword.constant {
+	color: #F92672;
+}
+
+keyword.bool, literal.keyword.bool {
+    color: #859900;
+}
+
+keyword.nothing, literal.keyword.nothing {
+    color: #859900;
+}
+
+escape, literal.escape {
+    color: #dc322f;
+}
+
+function > name {
+    color: rgba(38, 139, 210, 0.99);
+}
+
+identifier.function > name {
+    color: rgba(38, 139, 210, 1);
+}
+
+type, identifier.type {
+    color: #93a1a1;
+}
+
+variable.parameter, identifier.variable.parameter {
+	color: #657b83;
+}
+
+variable.named-parameter, identifier.variable.named-parameter {
+	color: #859900;
+}
+
+variable.named-parameter > name, identifier.variable.named-parameter > name {
+	font-style: italic;
+}
+
+variable.instance, identifier.variable.instance {
+    color: #657b83;
+}
+
+constant.numeric, constant.language {
+  color: #6a72c4;
+}
+
+keyword.control {
+    color: #859900;
+}
+
+keyword.definition {
+    color: #859900;
+    font-style: italic;
+}
+
+keyword.modifier {
+    color: #859900;
+}
+
+keyword.constant.other {
+	color: #d33682;
+}
+
+expression, container.expression {
+	spell-check: disabled;
+}
+
+
+comment.documentation, metadata.comment.documentation {
+	color: #2aa198;
+}
+
+comment.shebang, metadata.comment.shebang {
+	spell-check: disabled;
+}
+
+operator {
+    color: #657b83;
+}
+
+/* For non-standards */
+
+/* @group CSS */
+
+selector.css {
+	color: #859900;
+}
+
+delimeter.css {
+    color: #268bd2;
+}
+
+property-name {
+	color: #b58900;
+}
+
+zkeyword.other.zunit.css {
+	color: #2aa198;
+}
+
+zconstant.zother.color.rgb-value.css {
+	color: #2aa198 !important;
+}
+
+zconstant.nzumeric.css {
+	color: #2aa198;
+}
+
+css.id.selector { color: #fc9218; }
+selector.css.class { color: #ff509d !important; }
+selector.css > pseudo-class { color: rgba(213, 57, 130, 0.7); }
+selector.css > pseudo-class > * { color: rgba(213, 57, 130, 0.6); }
+
+property-list.block.css punctuation* {
+  color: rgba(0,0,0,.3);
+}
+
+property-list.block.css keyword.important.css {
+  color: rgba(0,0,0,.3); 
+    font-weight: bold;
+}
+
+/* @end */
+
+/* @group Python */
+
+python container name, python function name {
+	color: #268bd2;
+}
+
+python container parameters name {
+	color: #657b83;
+}
+
+python variable type {
+	color: #657b83;
+}
+
+python keyword.control.import {
+    color: #cb4b16;
+}
+
+}
+/* @end */
+
+/* @group HTML */
+
+tag > name {
+	color: #268bd2;
+}
+
+tag > attribute-name {
+	color: #839496;
+}
+
+tag > attribute-value.string.quoted, tag > attribute-value.string.quoted punctuation.definition {
+	color: #2aa198;
+}
+
+punctuation.definition {
+    color: #839496;
+}
+
+tag.preprocessor.xml.html, tag.preprocessor.xml.html entity.name {
+    color: #839496;
+    font-style: italic;
+}
+
+tag.preprocessor.xml.html punctuation.definition {
+    color: #839496 ;
+    font-style: normal;
+}
+
+comment, metadata, comment.block.html, comment.block.html punctuation.definition, comment.block.css, comment, comment, comment>punctuation, tag.doctype, tag.doctype > *, tag.doctype > string.quoted, comment, comment>punctuation, tag.doctype, tag.doctype > *, tag.doctype > string.quoted, comment.block.html invalid.illegal.bad-comments-or-CDATA.html {
+    color: rgba(0,0,0,.25);
+    -webkit-font-smoothing: antialiased;
+}
+
+tag.doctype, tag.doctype entity.name {
+    color: #839496;
+    font-weight: normal;
+    font-style: italic;
+}
+
+tag.doctype punctuation.definition {
+    color: #839496;
+    font-style: normal;
+}
+
+tag.self-closing.cdata {
+    color: #839496;
+}
+
+embedded-style.html entity.name, embedded-javascript.html entity.name {
+    font-style: italic;
+    font-weight: normal;
+}
+
+constant.character.entity.html {
+    color: #859900;
+}
+
+invalid.illegal.bad-ampersand.html {
+    color: #dc322f;
+}
+/* @end */
+
+/* @group JavaScript */
+
+support, keyword.operator.new {
+    color: #b58900;
+}
+
+constant.language.js, constant.language.null.js, constant.language.boolean.true.js, constant.language.boolean.false.js {
+    color: #b58900;
+}
+
+keyword.control.js, keyword.operator.js {
+    color: #859900;
+}
+
+meta.brace.curly, meta.brace.square.js {
+    color: #268bd2;
+}
+
+string.regexp.js, string.regexp.js punctuation.definition{
+    color: #2aa198;
+}
+
+string.regexp.js constant.character.escape.js {
+    color: #6c71c4;
+}
+
+variable.language.js {
+    color: #268bd2;
+}
+
+storage.type.js {
+    color: #268bd2;
+}
+
+
+punctuation.brace.curly,
+string.quoted > punctuation,
+punctuation.statement.terminator  {
+  color: rgba(0,0,0,.2);
+}
+
+punctuation.delimiter.comma {
+  color: rgba(0,0,0,.3);
+}
+
+punctuation.brace.round,
+language-root.js operator.assignment {
+  color: #93a1a1;
+}
+
+string.quoted > punctuation {
+  font-size: 3px !important;
+}
+
+operator.logical/*, variable.function.method*/ {
+  color: rgba(38, 139, 210, 1);
+}
+
+function.definition > name {
+  font-weight: bold;
+}
+
+/* @end */

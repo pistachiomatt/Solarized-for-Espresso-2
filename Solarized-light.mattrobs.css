@@ -117,7 +117,8 @@ operator {
 
 /* @group CSS */
 
-selector.css {
+selector.css,
+punctuation.definition.mixin {
 	color: #859900;
 }
 
@@ -189,7 +190,7 @@ tag > attribute-name {
 }
 
 tag > attribute-value.string.quoted, tag > attribute-value.string.quoted punctuation.definition {
-	color: #2aa198;
+	//color: #2aa198;
 }
 
 punctuation.definition {
@@ -277,9 +278,13 @@ storage.type.js {
 
 punctuation.brace.curly,
 string.quoted > punctuation,
-punctuation.statement.terminator  {
-  color: rgba(0,0,0,.2);
+punctuation.statement.terminator,
+tag.open punctuation.definition,
+tag.close punctuation.definition,
+attribute-value.string.quoted.double punctuation  {
+  color: rgba(0,0,0,.2) !important;
 }
+
 
 punctuation.delimiter.comma {
   color: rgba(0,0,0,.3);
@@ -294,12 +299,15 @@ string.quoted > punctuation {
   font-size: 3px !important;
 }
 
-operator.logical/*, variable.function.method*/ {
+operator.logical/*, variable.function.method*/,
+mixin.less {
   color: rgba(38, 139, 210, 1);
 }
 
-function.definition > name {
+function.definition > name,
+ {
   font-weight: bold;
 }
+
 
 /* @end */
